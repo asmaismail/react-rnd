@@ -27,8 +27,8 @@
 }
 
 .div1 .btn {
-    padding: 5px;
-    color: aliceblue;
+    padding: 10px;
+    color: black;
     border-radius: 5px;
     margin-left: 10px;
     margin-top: 20%;
@@ -50,12 +50,13 @@
     width: 50vw;
     cursor: pointer;
     transform: skew(0deg, 25deg);
-    height: 60vh;
+    height: 55vh;
     position: relative;
     top: 0;
 
     right: 0%;
 }
+
 
 .form {
     /* height: 30px; */
@@ -80,17 +81,84 @@
     border: 1px solid gray;
     margin-left: 6px;
 }
-
-.outerdiv{
+.outerdiv {
     width: 100%;
-    height: 100%;
-    background-color: aqua;
-
+    height: 100vh;
+    position: relative;
+    /* background-color: aqua; */
 }
-.innerdiv{
+
+.innerdiv {
     margin: 70px;
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    /* justify-content: center; */
+    /* align-items: center; */
+background-color: darkgray;
+    height: 80vh;
 }
+
+.outerdiv::before,
+.outerdiv::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.outerdiv::before {
+    top: 0;
+    left: 0;
+}
+
+.outerdiv::after {
+    bottom: 0;
+    right: 0;
+}
+.sidebar {
+    width: 250px;
+    /* height: 100vh; */
+    background-color: #333;
+    color: #fff;
+    /* transition: all 0.3s ease; */
+    /* position: fixed; */
+    /* left: 10px; */
+    z-index: 1;
+  }
+  
+  .sidebar.open {
+    /* left: 0; */
+  }
+  
+  .toggle-button {
+    /* background-color: transparent; */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    padding: 10px;
+    /* border-bottom: 1px solid #555; */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .sidebar {
+      width: 150px;
+    }
+  }
+  

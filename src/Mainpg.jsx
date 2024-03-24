@@ -1,6 +1,5 @@
 import React from "react";
 import "./Mainpg.css";
-import Section from "./Section";
 import { Card, Col, Row } from "antd";
 import { Button, Cascader, Form, Input, InputNumber, Mentions } from "antd";
 const formItemLayout = {
@@ -168,7 +167,6 @@ const Mainpg = () => {
           </div>
         </div>
       </div>
-      <Section />
     </>
   );
 };
